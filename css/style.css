@@ -65,7 +65,7 @@ html{
     left: 0;
 }
 .mainbackground{
-    background: url(/images/mainimage.png);
+    background: url(../images/mainimage.png);
     background-size:cover;
     background-position: center;
     background-repeat:no-repeat ;
