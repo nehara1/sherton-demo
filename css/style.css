@@ -714,7 +714,7 @@ input[name=r]{
     height: 230px;
     display: inline-block;
     border-radius: 10px;
-    padding: 15px 25px;
+    padding: 15px 15px;
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
@@ -738,7 +738,7 @@ input[name=r]{
 
 
 .card-text {
-    background-color: rgba(0, 0, 0, 0.575);
+    background-color: rgba(240, 240, 240, 0.575);
     color: white;
 
 }
@@ -761,13 +761,13 @@ input[name=r]{
     padding: 15px 25px;
     box-sizing: border-box;
     cursor: pointer;
-    margin: 10px 15px;
+    margin: 100px 15px;
     background-position: right;
     background-size: cover;
     transition: transform 0.5s;
-    background-color:rgb(206, 24, 0);
+    background-color:rgb(29, 28, 85);
     font-weight: 60%;
-    color: #000;
+    color: #ffffff;
     
 
 }
