@@ -65,7 +65,7 @@ html{
     left: 0;
 }
 .mainbackground{
-    background: url(/images/mainimage.png);
+    background: url(images/mainimage.png);
     background-size:cover;
     background-position: center;
     background-repeat:no-repeat ;
@@ -725,13 +725,13 @@ input[name=r]{
 }
 
 .card1{
-    background-image:url(/images/mlesi-aerial-view-1726-hor-clsc.webp) ;
+    background-image:url(images/mlesi-aerial-view-1726-hor-clsc.webp) ;
 }
 .card2{
-    background-image:url(/images/mlesi-aerial-view-1726-hor-clsc.webp) ;
+    background-image:url(images/mlesi-aerial-view-1726-hor-clsc.webp) ;
 }
 .card3{
-    background-image:url(/images/mlesi-aerial-view-1726-hor-clsc.webp) ;
+    background-image:url(images/mlesi-aerial-view-1726-hor-clsc.webp) ;
 }
 
 
