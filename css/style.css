@@ -12,6 +12,7 @@
     text-decoration: none;
     text-transform: capitalize;
     outline: none;
+    font-family: 'Crimson Pro', serif;
 }
 html{
     font-size: 62.5%;
