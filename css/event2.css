@@ -262,6 +262,21 @@ p{
 }
 
 
+.column img {
+    transition: transform 0.3s, border-width 0.3s; 
+}
+
+.column img:hover {
+    transform: scale(1.1);
+    border-width: 10px; 
+    animation: pulse 1s infinite alternate; 
+}
+
+@keyframes pulse {
+    to {
+        border-width: 20px;
+    }
+}
 
 
 

@@ -228,6 +228,19 @@ p{
 }
 
 
+.column img {
+    transition: opacity 0.3s;
+}
+
+.column img:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
 
 
 
