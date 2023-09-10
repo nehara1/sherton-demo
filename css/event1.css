@@ -38,7 +38,7 @@ html{
 .header .navbar a{
     font-size: 2.1rem;
     margin-left: 1.5rem;
-    color:#000000;
+    color:#ffffff;
 
 }
 .header .navbar a:hover{
@@ -410,6 +410,7 @@ footer{
             margin: 1rem;
             padding: 1rem;
             background: white;
+            color: #000;
             border-radius: 10px;
         }
        
