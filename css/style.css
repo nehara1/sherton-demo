@@ -1342,10 +1342,12 @@ a {
     color: #000000;
     font-size: 40px;
     margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .form-text p{
     color: #000000;
     font-size: large;
+    margin-bottom: 10px;
 }
 
 .main-form div{
@@ -1366,7 +1368,7 @@ a {
 .main-form div select{
     width: 104%;
     background: none;
-    border: 1px solid #ffca00;;
+    border: 1px solid #ebda93;
     font-size: 20px;
     color: #ff0000;
     outline: none;
@@ -1388,7 +1390,7 @@ a {
 #submit input{
     
     width: 200px;
-    background-color: yellow !important;
+    background-color: #ebda93 !important;
     color: rgb(120, 9, 9) !important;
     transition: all .3s;
 }
@@ -2144,7 +2146,7 @@ a {
         font-size: large;
     }
     .main-form div span{
-        width: 100%;
+        width: 100px;
         color: #000000;
         font-size: 25px;
         
