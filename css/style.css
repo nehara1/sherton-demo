@@ -2129,13 +2129,18 @@ a {
     }
    
   }
-  @media only screen and (max-width:430px){
-    .restaurant h2 {
+  @media (max-width:430px){
+    .right .text h2 {
         margin-bottom: 20px;
-        margin-top: 25px;
+        margin-top: 30px;
         font-weight: 400;
-        font-size: 30px;
-      }
+        font-size: 24px;
+    }
+    .right .text p {
+        margin-bottom: 50px;
+        line-height: 25px;
+        font-size: 16px;
+    }
   }
 
 /* boookiiiiinggggggggggggggg */
