@@ -28,7 +28,7 @@ html{
     top: 0;
     right: 0;
     left: 0;
-    background-color: antiquewhite;
+    background-color:#0b4556;
     box-shadow: 0.5rem .5rem rgba(207, 6, 6, 0.1);
 
 }
@@ -36,10 +36,14 @@ html{
 .header #logo img{
     width: 100px;
 }
+.header #logo img {
+    width: 100px;
+    filter: brightness(0) invert(1);
+}
 .header .navbar a{
     font-size: 2.1rem;
     margin-left: 1.5rem;
-    color: var(--maincolor);
+    color:#fff;
 
 }
 .header .navbar a:hover{
@@ -178,7 +182,7 @@ width: 100%;
 position: relative;
 bottom: 0;
 left: 0;
-background: #063581;
+background: #0b4556;
 }
 footer .content{
 max-width: 1350px;
@@ -695,7 +699,7 @@ input[name=r]{
 
 }
 .col h1{
-    color: #646249;
+    color: #2a2121;
     font-size: 60px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
@@ -831,6 +835,7 @@ a {
 .about2-text h2{
     font-size: 3rem;
     line-height: 1;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .about2-text h4{
@@ -863,6 +868,7 @@ a {
 .about367-text h2{
     font-size: 3rem;
     line-height: 1;
+    font-family: 'Times New Roman', Times, serif;
 }
 .about367-text h4{
     font-size: 22px;
@@ -898,6 +904,7 @@ a {
 .styled-section {
     text-align: center;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .styled-table {
@@ -917,14 +924,12 @@ a {
 }
 
 .styled-table th {
-    background-color: #333;
-    color: white;
+    background-color: antiquewhite;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
-.styled-table td {
-    font-family: Arial, sans-serif;
-}
+
 
 .styled-table tr:nth-child(odd) {
     background-color: #e6e6e6;
@@ -964,6 +969,7 @@ a {
     /* padding-top: 150px; */
     padding-top: 50px;
     word-spacing: 3px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .about{
@@ -994,6 +1000,8 @@ a {
 .about-text h2{
     font-size: 3rem;
     line-height: 1;
+    margin-bottom: 20px;
+    font-weight: 300;
 }
 
 .about-text h4{
@@ -1024,7 +1032,7 @@ a {
 }
 
 .services-list div{
-    background: #d0c2c2;
+    background: linear-gradient(to left, #f1bb4e, #007acc);
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -1033,14 +1041,15 @@ a {
 }
 
 .services-list div:hover{
-    background: #507fa5;
+    background:	#efd8b9;
     transform: translate(-10px);
 }
 
 .services-list div h2{
     font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px
+    font-weight: 100;
+    margin-bottom: 15px;
+    color: #fff;
 }
 
 .services-list div a{
@@ -1049,6 +1058,11 @@ a {
     font-size: 15px;
     margin-top: 20px;
     display: inline-block;
+}
+.services-list div p{
+    color: #000000;
+    font-size: 15px;
+    font-weight: 300;
 }
 
 
@@ -1104,7 +1118,7 @@ a {
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #63b9ff );
+    background: linear-gradient(rgba(0, 0, 0, 0.6), 	#6fcbdf);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -1124,10 +1138,11 @@ a {
     margin-bottom: 20px;
     color: #f4f3f3;
     font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
 
 }
 .layer p{
-    color: #e6e6e6;
+    color: #ffffff;
     font-size: 20px;
 }
 
