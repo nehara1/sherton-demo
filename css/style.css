@@ -1186,14 +1186,15 @@ a {
 }
 .restaurant h2 {
   margin-bottom: 20px;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .restaurant .text p {
   margin-bottom: 50px;
   line-height: 25px;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .accordionItem {
@@ -1213,7 +1214,7 @@ a {
   border-radius: 3px;
   font-weight: 400;
   font-size: 17px;
-  color: #C1B086;
+  color: #c4b07e;
   margin-bottom: 20px;
 }
 
@@ -1254,7 +1255,7 @@ a {
 }
 
 .services-listevents div{
-    background: #d0c2c2;
+    background: linear-gradient(90deg, #09e5d5, #05bcf2, #0085ff, #0360ff, #0051ff);
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -1266,19 +1267,24 @@ a {
 .services-listevents div h2{
     font-size: 30px;
     font-weight: 500;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    color: #fff;
+}
+.services-listevents div p{
+    font-size: 16px;
+    color: #fff;
 }
 
 .services-listevents div a{
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 15px;
     margin-top: 20px;
     display: inline-block;
 }
 
 .services-listevents div:hover{
-    background: #507fa5;
+   background: linear-gradient(90deg, #EAB055, #C76B39, #A54822, #813513, #5A2000);
     transform: translate(-10px);
 }
 
