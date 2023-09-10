@@ -166,8 +166,10 @@ html {
 }
 .tester2 {
     font-size: 18px;
+    color: black;
 
 }
+
 
 .tab-titles {
     display: flex;
@@ -216,6 +218,7 @@ html {
    
     font-size: 14px;
     margin-top: 10px;
+    color: black;
 
 
 }
@@ -262,9 +265,7 @@ html {
     font-size: 22px; 
 }
 
-/* p {
-    color: #7E7E7E;
-    font-size: 16px;  */
+
 
 
 
