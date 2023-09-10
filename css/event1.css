@@ -64,7 +64,7 @@ html{
     left: 0;
 }
 .mainbackground{
-    background: url(../images/mainimage.png);
+    background: url(../images/weddingmain.jpg);
     background-size:cover;
     background-position: center;
     background-repeat:no-repeat ;
@@ -77,15 +77,17 @@ html{
 .main-text{
     text-align: center;
 }
-.main-text h2{
-    color: white;
+.main-text h2 {
+    color: rgb(0, 0, 0);
     font-size: 15px;
+    text-shadow: 10px 10px 10px rgba(255, 255, 255, 9);
 }
-.main-text h1{
-    color: white;
+
+.main-text h1 {
+    color: rgb(0, 0, 0);
     font-size: 38px;
     font-family: 'Times New Roman', Times, serif;
-
+    text-shadow: 10px 10px 10px rgba(255, 255, 255, 9); 
 }
 .main-text h1 span{
     color: #000000;
@@ -153,7 +155,7 @@ p{
 .explore{
     width: 100%;
     height: 100vh;
-    background-image: url(../images/slide4.webp);
+    background-image: url(../images/weddind2to.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

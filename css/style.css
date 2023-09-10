@@ -409,8 +409,9 @@ color: #eb2f06;
 .section p{
     color: rgb(255, 255, 255);
     margin-right: 15px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 100;
+    margin-top: 10px;
     
     
     
@@ -434,7 +435,7 @@ color: #eb2f06;
 .section2 h2{
     margin: 0;
     color: #fffafa;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 100;
 }
 .section2 p{
@@ -744,13 +745,13 @@ input[name=r]{
 }
 
 .card1{
-    background-image:url(../images/mlesi-aerial-view-1726-hor-clsc.webp) ;
+    background-image:url(../images/branch1.jpg) ;
 }
 .card2{
-    background-image:url(../images/mlesi-aerial-view-1726-hor-clsc.webp) ;
+    background-image:url(../images/branch2.jpg) ;
 }
 .card3{
-    background-image:url(../images/mlesi-aerial-view-1726-hor-clsc.webp) ;
+    background-image:url(../images/branch3.jpg) ;
 }
 
 
