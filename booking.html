@@ -53,18 +53,23 @@
     <div id="_app" x-data="_app" class="container3">
 
       <div class="mt-4">
-
-        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3" x-data="{ showLoyaltyPoints: false, loyality_points: 0 }">
           <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">Welcome to Sheraton Maldives</h1>
             <p class="col-md-8 fs-4">
               Enjoy your stay!!!
             </p>
-            <p>
-              You have <span x-text="loyality_points"></span> loyality points
+            <button @click="showLoyaltyPoints = !showLoyaltyPoints" class="btn btn-primary">
+              Loyalty Points
+            </button>
+
+            <!-- Loyalty points section toggled based on showLoyaltyPoints variable -->
+            <p x-show="showLoyaltyPoints">
+              You have <span x-text="loyality_points"></span> loyalty points
             </p>
           </div>
         </div>
+
 
         <ul class="nav nav-tabs">
           <li class="nav-item" x-on:click="tab = 1">
@@ -170,7 +175,7 @@
 
 
             </div>
-            
+
 
             <hr>
 
@@ -335,6 +340,7 @@
               <button class="btn btn-success" type="submit">
                 Confirm Booking
               </button>
+             
 
               <button type="button" class="btn btn-primary" x-on:click="addToFavorites">
                 Add To Favorites
@@ -443,60 +449,10 @@
 
     </div>
   </body>
+  
   <script src="/js/global.js"></script>
 
-  <!--!!!!!!!!! footer!!!!!!!!!!!!! -->
-  <!--!!!!!!!!! footer!!!!!!!!!!!!! -->
-  <footer>
-    <div class="content">
-      <div class="left box">
-        <div class="upper">
-          <div class="topic">About Sheraton Maldives</div>
-          <p>Discover paradise at Sheraton Maldives Resort & Spa. Nestled on a private island in the North
-            Malé Atoll,
-            our
-            resort offers a serene escape where luxury meets nature. Immerse yourself in the beauty of the
-            Maldives with
-            pristine beaches, crystal-clear waters, and lush tropical landscapes.</p>
-        </div>
-        <div class="lower">
-          <div class="topic">Contact us</div>
-          <div class="phone">
-            <a href="#"><i class="fas fa-phone-volume"></i>+960 1234 5678</a>
-          </div>
-          <div class="email">
-            <a href="#"><i class="fas fa-envelope"></i>info@sheratonmaldives.com</a>
-          </div>
-        </div>
-      </div>
-      <div class="middle box">
-        <div class="topic">Our Services</div>
-        <div><a href="#">Luxury Accommodations</a></div>
-        <div><a href="#">Fine Dining & Restaurants</a></div>
-        <div><a href="#">Spa & Wellness Retreats</a></div>
-        <div><a href="#">Water Sports & Activities</a></div>
-        <div><a href="#">Weddings & Events</a></div>
-        <div><a href="#">Scenic Excursions</a></div>
-      </div>
-      <div class="right box">
-        <div class="topic">Subscribe to Sheraton Maldives</div>
-        <form action="#">
-          <input type="text" placeholder="Enter email address">
-          <input type="submit" name="" value="Subscribe">
-          <div class="media-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- Marriott.com. (2016). Sheraton Maldives Full Moon Resort & Spa. [online] Available at: https://www.marriott.com/en-us/hotels/mlesi-sheraton-maldives-full-moon-resort-and-spa/overview/ [Accessed 17 Aug. 2023].
 
-‌ -->
-  </footer>
 </body>
 
 </html>
