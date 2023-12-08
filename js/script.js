@@ -13,21 +13,24 @@ menubar.onclick = () => {
 
 const parentContainer = document.querySelector('.read-more-container');
 
-parentContainer.addEventListener('click', event => {
 
-    const current = event.target;
 
-    const isReadMoreBtn = current.className.includes('read-more-btn');
+if (parentContainer) {
+    parentContainer.addEventListener('click', event => {
 
-    if (!isReadMoreBtn) return;
+        const current = event.target;
 
-    const currentText = event.target.parentNode.querySelector('.read-more-text');
+        const isReadMoreBtn = current.className.includes('read-more-btn');
 
-    currentText.classList.toggle('read-more-text--show');
+        if (!isReadMoreBtn) return;
 
-    current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
+        const currentText = event.target.parentNode.querySelector('.read-more-text');
 
-})
+        currentText.classList.toggle('read-more-text--show');
+
+        current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
+    });
+}
 
 
 // image scroll 
