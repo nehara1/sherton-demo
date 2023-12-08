@@ -2063,33 +2063,3 @@ a {
 
 /* boookiiiiinggggggggggggggg */
 
-.container3{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f2f2f2;
-    flex-direction: column;
-    padding: 50px;
-    font-size: 22px;
-
-}
-.twowaybind{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f2f2f2;
-    flex-direction: column;
-    padding: 50px;
-    font-size: 22px;
-    color:#f2f2f2 ;
-
-}
-.rooming{
-    font-size: 20px;
-    margin-left: 50%;
-    margin-right: 50%;
-}

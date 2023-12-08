@@ -3,10 +3,7 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('_app', () => ({
 
         coupons: [
-            'COUPON1',
-            'COUPON2',
-            'COUPON3',
-            'COUPON4',
+            'Promo123',
         ],
 
         past_bookings: [],
@@ -243,7 +240,7 @@ document.addEventListener('alpine:init', () => {
             this.$watch('booking.promo_code', (value) => {
                 if (this.coupons.includes(value)) {
                     // alert('Coupon Applied');
-                    this.booking.discount_percentage = 10;
+                    this.booking.discount_percentage = 5;
                 } else {
                     this.booking.discount_percentage = 0;
                 }
