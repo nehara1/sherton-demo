@@ -59,10 +59,10 @@ document.addEventListener('alpine:init', () => {
 
         get total_adventure_cost() {
             let total = 0;
-            total += this.booking.adventure.number_of_adults_local * 5000;
-            total += this.booking.adventure.number_of_adults_foreign * 10000;
-            total += this.booking.adventure.number_of_children_local * 2000;
-            total += this.booking.adventure.number_of_children_foreign * 5000;
+            total += this.booking.adventure.number_of_adults_local * 1000;
+            total += this.booking.adventure.number_of_adults_foreign * 2000;
+            total += this.booking.adventure.number_of_children_local * 500;
+            total += this.booking.adventure.number_of_children_foreign * 1000;
             total += this.booking.adventure.adult_guide * 1000;
             total += this.booking.adventure.child_guide * 500;
             this.booking.final_adventure_cost = total;
@@ -71,7 +71,8 @@ document.addEventListener('alpine:init', () => {
 
         get total_cost() {
             let total = 0;
-            total += this.booking.room_cost * this.booking.number_of_rooms;
+            extra = this.booking.extra_bed * 8000;
+            total += (this.booking.room_cost   * this.booking.number_of_rooms) + extra;
             total += this.total_adventure_cost;
             this.booking.total_cost = total;
 
@@ -82,8 +83,8 @@ document.addEventListener('alpine:init', () => {
             this.booking.final_total = total - this.booking.total_discount;
 
             return total;
-        },
 
+        },
         goToCheckout() {
             // change the tab to 2 (checkout)
             this.tab = 2;
