@@ -413,10 +413,34 @@
             </div>
 
 
-            <button class="btn bg-green-500 hover:bg-green-600 text-white font-bold py-6 px-9 rounded-lg" type="submit"
+            <!-- <button class="btn bg-green-500 hover:bg-green-600 text-white font-bold py-6 px-9 rounded-lg" type="submit"
               onclick="showAlert()">
               Confirm Booking
-            </button>
+            </button> -->
+
+            <div x-data="{ showAlert: false }">
+              <button class="btn bg-green-500 hover:bg-green-600 text-white font-bold py-6 px-9 rounded-lg"
+                      type="button"
+                      x-on:click="showAlert = true">
+                Confirm Booking
+              </button>
+            
+              <div x-show="showAlert" x-transition:enter="transition ease-out duration-300"
+                   x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                   x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100"
+                   x-transition:leave-end="opacity-0" 
+                   class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-75">
+                <div class="bg-white rounded-lg p-8">
+                  <!-- Your alert content here -->
+                  <p>Your booking has been confirmed!</p>
+                  <button class="btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg mt-4"
+                          x-on:click="showAlert = false">
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+            
 
             <button type="button" class="btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-6 px-9 rounded-lg"
               x-on:click="addToFavorites">
