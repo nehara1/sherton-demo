@@ -57,7 +57,7 @@ document.addEventListener('alpine:init', () => {
             final_adventure_cost: 0
         },
 
-        get total_adventure_cost() {
+       get total_adventure_cost() {
             let total = 0;
             total += this.booking.adventure.number_of_adults_local * 1000;
             total += this.booking.adventure.number_of_adults_foreign * 2000;

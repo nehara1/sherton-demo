@@ -45,24 +45,26 @@
 
   </div>
 
-  <div id="_app" x-data="_app" class="fullbody">
+  <div id="_app" x-data="_app" class="fullbody bg-gray-100 p-6 md:p-10 lg:p-16 xl:p-20 text-base md:text-lg lg:text-xl xl:text-2xl">
 
-    <div class="mt-4 ">
-      <div class="p-100 mb-4 bg-body-tertiary rounded-3" x-data="{ showLoyaltyPoints: false, loyality_points: 0 }">
+    <div class="mt-8 mb-8">
+      <div class="p-100 mb-4 bg-body-tertiary rounded-3" x-data="{ showLoyaltyPoints: false, loyalty_points: 0 }" style="background-image: url('/images/adventures4.webp'); background-size: cover; background-position: center;">
         <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold">Welcome to Sheraton Maldives</h1>
-          <p class="col-md-8 fs-4">
+          <h1 class="display-5 fw-bold text-white">Welcome to Sheraton Maldives</h1>
+          <p class="col-md-8 fs-4 text-white mb-10">
             Enjoy your stay!!!
           </p>
-          <button @click="showLoyaltyPoints = !showLoyaltyPoints" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+          <button @click="showLoyaltyPoints = !showLoyaltyPoints"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
             Loyalty Points
           </button>
-          
-          <p x-show="showLoyaltyPoints">
+    
+          <p class="text-white mt-10 mb-8 text-3xl" x-show="showLoyaltyPoints">
             You have <span x-text="loyality_points"></span> loyalty points
           </p>
         </div>
       </div>
+    </div>
 
 
 
@@ -103,7 +105,7 @@
             <div class="col-12">
               <label for="room" class="form-label">Room</label>
               <div class="form-floating mb-3">
-                <select type="date" x-model="booking.room_cost" class="form-control" id="room">
+                <select type="date" x-model="booking.room_cost" class="form-control " id="room">
                   <option value="0" disabled>Select Room</option>
                   <option value="25000">Delux Rooms</option>
                   <option value="35000">Delux Guest Rooms</option>
@@ -150,7 +152,7 @@
             <div class="col">
               <label for="extra-bed" class="form-label">Extra Bed</label>
               <div class="form-floating mb-3">
-                <input x-model="booking.extra_bed" type="number" class="form-control" id="extra-bed" min="0" max="10" />
+                <input x-model="booking.extra_bed" type="number" class="form-control" id="extra-bed" min="0" max="5" />
               </div>
             </div>
           </div>
@@ -161,6 +163,16 @@
           <h5>
             Select Adventure
           </h5>
+
+          <div class="form-floating mb-3">
+            <select type="date" class="form-control" id="room">
+              <option value="">Diving</option>
+              <option value="">Sunset Dolphin Cruise</option>
+              <option value="">Coral Propagation Project</option>
+              <option value="">Scuba Diving</option>
+              <option value="">Watersports</option>
+            </select>
+          </div>
 
           <div class="row">
             <div class="col-12">
@@ -225,7 +237,7 @@
                 <input x-model="booking.promo_code" type="text" class="form-control" id="promo_code" />
               </div>
             </div>
-            
+
 
             <table class="table table-bordered">
               <thead>
@@ -268,10 +280,11 @@
               </tbody>
             </table>
 
-            <button x-on:click="goToCheckout" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg">
+            <button x-on:click="goToCheckout"
+              class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg">
               Checkout
             </button>
-            
+
           </div>
         </div>
 
@@ -396,16 +409,18 @@
               </div>
             </div>
 
-          
-            <button class="btn bg-green-500 hover:bg-green-600 text-white font-bold py-6 px-9 rounded-lg" type="submit" onclick="showAlert()">
+
+            <button class="btn bg-green-500 hover:bg-green-600 text-white font-bold py-6 px-9 rounded-lg" type="submit"
+              onclick="showAlert()">
               Confirm Booking
             </button>
-            
-            <button type="button" class="btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-6 px-9 rounded-lg" x-on:click="addToFavorites">
+
+            <button type="button" class="btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-6 px-9 rounded-lg"
+              x-on:click="addToFavorites">
               Add To Favorites
             </button>
-            
-            
+
+
           </form>
         </div>
 
@@ -414,51 +429,53 @@
             Favorites
           </h5>
 
-
-          <table class="table table-bordered w-full">
-            <thead class="bg-gray-200">
-              <tr>
-                <th scope="col" class="px-4 py-2">Check In</th>
-                <th scope="col" class="px-4 py-2">Check Out</th>
-                <th scope="col" class="px-4 py-2">Room Cost</th>
-                <th scope="col" class="px-4 py-2">Number of Rooms</th>
-                <th scope="col" class="px-4 py-2">Number of Adults</th>
-                <th scope="col" class="px-4 py-2">Number of Children</th>
-                <th scope="col" class="px-4 py-2">Extra Bed</th>
-                <th scope="col" class="px-4 py-2">Promo Code</th>
-                <th scope="col" class="px-4 py-2">Total Cost</th>
-                <th scope="col" class="px-4 py-2">Discount Percentage</th>
-                <th scope="col" class="px-4 py-2">Total Discount</th>
-                <th scope="col" class="px-4 py-2">Final Total</th>
-                <th scope="col" class="px-4 py-2">Total Adventure Cost</th>
-                <th scope="col" class="px-4 py-2">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <template x-for="(booking, index) in favorites" :key="booking">
-                <tr class="border-b">
-                  <td class="px-4 py-2" x-text="booking.checkin"></td>
-                  <td class="px-4 py-2" x-text="booking.checkout"></td>
-                  <td class="px-4 py-2" x-text="booking.room_cost"></td>
-                  <td class="px-4 py-2" x-text="booking.number_of_rooms"></td>
-                  <td class="px-4 py-2" x-text="booking.number_of_adults"></td>
-                  <td class="px-4 py-2" x-text="booking.number_of_children"></td>
-                  <td class="px-4 py-2" x-text="booking.extra_bed"></td>
-                  <td class="px-4 py-2" x-text="booking.promo_code"></td>
-                  <td class="px-4 py-2" x-text="booking.total_cost"></td>
-                  <td class="px-4 py-2" x-text="booking.discount_percentage"></td>
-                  <td class="px-4 py-2" x-text="booking.total_discount"></td>
-                  <td class="px-4 py-2" x-text="booking.final_total"></td>
-                  <td class="px-4 py-2" x-text="booking.final_adventure_cost"></td>
-                  <td class="px-4 py-2">
-                    <button class="btn btn-primary" x-on:click="bookFavorite(index)">
-                      Book Now
-                    </button>
-                  </td>
+          <div class="table-responsive">
+            <table class="table table-bordered w-full">
+              <thead class="bg-gray-200">
+                <tr>
+                  <th scope="col" class="px-4 py-2">Check In</th>
+                  <th scope="col" class="px-4 py-2">Check Out</th>
+                  <th scope="col" class="px-4 py-2">Room Cost</th>
+                  <th scope="col" class="px-4 py-2">Number of Rooms</th>
+                  <th scope="col" class="px-4 py-2">Number of Adults</th>
+                  <th scope="col" class="px-4 py-2">Number of Children</th>
+                  <th scope="col" class="px-4 py-2">Extra Bed</th>
+                  <th scope="col" class="px-4 py-2">Promo Code</th>
+                  <th scope="col" class="px-4 py-2">Total Cost</th>
+                  <th scope="col" class="px-4 py-2">Discount Percentage</th>
+                  <th scope="col" class="px-4 py-2">Total Discount</th>
+                  <th scope="col" class="px-4 py-2">Final Total</th>
+                  <th scope="col" class="px-4 py-2">Total Adventure Cost</th>
+                  <th scope="col" class="px-4 py-2">Actions</th>
                 </tr>
-              </template>
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                <template x-for="(booking, index) in favorites" :key="booking">
+                  <tr class="border-b">
+                    <td class="px-4 py-2" x-text="booking.checkin"></td>
+                    <td class="px-4 py-2" x-text="booking.checkout"></td>
+                    <td class="px-4 py-2" x-text="booking.room_cost"></td>
+                    <td class="px-4 py-2" x-text="booking.number_of_rooms"></td>
+                    <td class="px-4 py-2" x-text="booking.number_of_adults"></td>
+                    <td class="px-4 py-2" x-text="booking.number_of_children"></td>
+                    <td class="px-4 py-2" x-text="booking.extra_bed"></td>
+                    <td class="px-4 py-2" x-text="booking.promo_code"></td>
+                    <td class="px-4 py-2" x-text="booking.total_cost"></td>
+                    <td class="px-4 py-2" x-text="booking.discount_percentage"></td>
+                    <td class="px-4 py-2" x-text="booking.total_discount"></td>
+                    <td class="px-4 py-2" x-text="booking.final_total"></td>
+                    <td class="px-4 py-2" x-text="booking.final_adventure_cost"></td>
+                    <td class="px-4 py-2">
+                      <button class="btn btn-primary" x-on:click="bookFavorite(index)">
+                        Book Now
+                      </button>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+
 
 
         </div>
@@ -467,43 +484,45 @@
             Past Bookings
           </h5>
 
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">Check In</th>
-                <th scope="col">Check Out</th>
-                <th scope="col">Room Cost</th>
-                <th scope="col">Number of Rooms</th>
-                <th scope="col">Number of Adults</th>
-                <th scope="col">Number of Children</th>
-                <th scope="col">Extra Bed</th>
-                <th scope="col">Promo Code</th>
-                <th scope="col">Total Cost</th>
-                <th scope="col">Discount Percentage</th>
-                <th scope="col">Total Discount</th>
-                <th scope="col">Final Total</th>
-                <th scope="col">Total Adventure Cost</th>
-              </tr>
-            </thead>
-            <tbody>
-              <template x-for="booking in past_bookings" :key="booking">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
                 <tr>
-                  <td x-text="booking.checkin"></td>
-                  <td x-text="booking.checkout"></td>
-                  <td x-text="booking.room_cost"></td>
-                  <td x-text="booking.number_of_rooms"></td>
-                  <td x-text="booking.number_of_adults"></td>
-                  <td x-text="booking.number_of_children"></td>
-                  <td x-text="booking.extra_bed"></td>
-                  <td x-text="booking.promo_code"></td>
-                  <td x-text="booking.total_cost"></td>
-                  <td x-text="booking.discount_percentage"></td>
-                  <td x-text="booking.total_discount"></td>
-                  <td x-text="booking.final_total"></td>
-                  <td x-text="booking.final_adventure_cost"></td>
+                  <th scope="col">Check In</th>
+                  <th scope="col">Check Out</th>
+                  <th scope="col">Room Cost</th>
+                  <th scope="col">Number of Rooms</th>
+                  <th scope="col">Number of Adults</th>
+                  <th scope="col">Number of Children</th>
+                  <th scope="col">Extra Bed</th>
+                  <th scope="col">Promo Code</th>
+                  <th scope="col">Total Cost</th>
+                  <th scope="col">Discount Percentage</th>
+                  <th scope="col">Total Discount</th>
+                  <th scope="col">Final Total</th>
+                  <th scope="col">Total Adventure Cost</th>
                 </tr>
-              </template>
-            </tbody>
+              </thead>
+              <tbody>
+                <template x-for="booking in past_bookings" :key="booking">
+                  <tr>
+                    <td x-text="booking.checkin"></td>
+                    <td x-text="booking.checkout"></td>
+                    <td x-text="booking.room_cost"></td>
+                    <td x-text="booking.number_of_rooms"></td>
+                    <td x-text="booking.number_of_adults"></td>
+                    <td x-text="booking.number_of_children"></td>
+                    <td x-text="booking.extra_bed"></td>
+                    <td x-text="booking.promo_code"></td>
+                    <td x-text="booking.total_cost"></td>
+                    <td x-text="booking.discount_percentage"></td>
+                    <td x-text="booking.total_discount"></td>
+                    <td x-text="booking.final_total"></td>
+                    <td x-text="booking.final_adventure_cost"></td>
+                  </tr>
+                </template>
+              </tbody>
+          </div>
         </div>
       </div>
     </div>
