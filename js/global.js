@@ -257,6 +257,20 @@ document.addEventListener('alpine:init', () => {
                 }
             });
 
+            // watch tab for changes and do something
+            this.$watch('tab', (value) => {
+               console.log(value);
+
+               // if the value is 2 check if there is an active booking by checking for number_of_rooms
+               if(value == 2 && this.booking.number_of_rooms == 0 ){
+                alert('Please select a room first Yakoooo');
+                     this.tab = 1;
+
+               }
+
+            });
+
+
             // check if there is a booking in localstorage and load it
             if (localStorage.getItem('booking')) {
                 this.booking = JSON.parse(localStorage.getItem('booking'));
