@@ -39,27 +39,36 @@ if (parentContainer) {
 function autoScroll() {
     // Get all the radio buttons
     const radioButtons = document.querySelectorAll('input[name="r"]');
+
     let currentIndex = 0;
 
     // Function to show the next slide
     function showNextSlide() {
-        radioButtons[currentIndex].checked = false;
-        currentIndex = (currentIndex + 1) % radioButtons.length;
-        radioButtons[currentIndex].checked = true;
+        if(radioButtons && radioButtons[currentIndex]){
+            radioButtons[currentIndex].checked = false;
+            currentIndex = (currentIndex + 1) % radioButtons.length;
+            radioButtons[currentIndex].checked = true;
+        } 
     }
 
     // Auto-scroll interval (change the time interval as needed)
     const interval = setInterval(showNextSlide, 5000); // Change the time (in milliseconds)
 
     // Stop auto-scrolling when the user interacts with the slider
-    document.querySelector('#slider').addEventListener('mouseover', () => {
-        clearInterval(interval);
-    });
+    const slider = document.querySelector('#slider');
 
-    // Resume auto-scrolling when the user stops interacting with the slider
-    document.querySelector('#slider').addEventListener('mouseout', () => {
-        interval = setInterval(showNextSlide, 5000); // Change the time (in milliseconds)
-    });
+    if(slider){
+        slider.addEventListener('mouseover', () => {
+            clearInterval(interval);
+        });
+
+         // Resume auto-scrolling when the user stops interacting with the slider
+        slider.addEventListener('mouseout', () => {
+            interval = setInterval(showNextSlide, 5000); // Change the time (in milliseconds)
+        });
+    }
+
+   
 }
 
 // Call the autoScroll function when the page loads

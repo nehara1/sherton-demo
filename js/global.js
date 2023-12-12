@@ -2,6 +2,8 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('_app', () => ({
 
+        confirmAlert: false,
+
         coupons: [
             'Promo123',
         ],
@@ -17,7 +19,7 @@ document.addEventListener('alpine:init', () => {
         booking: {
             checkin: null,
             checkout: null,
-            room_cost: 0,
+            room_cost: null,
             number_of_rooms: 0,
             number_of_adults: 0,
             number_of_children: 0,
@@ -87,15 +89,21 @@ document.addEventListener('alpine:init', () => {
         },
         goToCheckout() {
             // change the tab to 2 (checkout)
-            this.tab = 2;
+            this.tab = 3;
 
             // save the booking to localstorage
             localStorage.setItem('booking', JSON.stringify(this.booking));
         },
 
+        goToAdventures() {
+            this.tab = 2;
+            
+            localStorage.setItem('booking', JSON.stringify(this.booking));
+        },
+
         completeBooking() {
 
-            this.tab = 4;
+            this.tab = 5;
 
             // if the booking has more than 3 rooms add 20 loyality points
             if (this.booking.number_of_rooms > 3) {
@@ -157,6 +165,8 @@ document.addEventListener('alpine:init', () => {
 
             // clear the booking from localstorage
             localStorage.removeItem('booking');
+
+            this.confirmAlert = true;
         },
 
         bookFavorite(index) {
@@ -169,7 +179,7 @@ document.addEventListener('alpine:init', () => {
         },
 
         addToFavorites() {
-            this.tab = 3;
+            this.tab = 4;
 
             // add the booking to past bookings
             this.favorites.push(this.booking);
