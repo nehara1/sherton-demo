@@ -113,36 +113,36 @@
           <section class="room top" id="room">
             <div class="container2005">
               <div class="heading_top flex1">
-              <div class="content grid">
-                <div class="box">
-                  <div class="img">
-                    <img src="images/room1.webp" alt="">
+                <div class="content grid">
+                  <div class="box">
+                    <div class="img">
+                      <img src="images/room1.webp" alt="">
+                    </div>
+                    <div class="text">
+                      <h3>Delux Rooms</h3>
+                      <p> <span>LKR</span>25,000 <span>/per night</span> </p>
+                    </div>
                   </div>
-                  <div class="text">
-                    <h3>Delux Rooms</h3>
-                    <p> <span>LKR</span>25,000 <span>/per night</span> </p>
+                  <div class="box">
+                    <div class="img">
+                      <img src="images/room2.webp" alt="">
+                    </div>
+                    <div class="text">
+                      <h3>Delux Guest Rooms</h3>
+                      <p> <span>LKR</span>35,000 <span>/per night</span> </p>
+                    </div>
                   </div>
-                </div>
-                <div class="box">
-                  <div class="img">
-                    <img src="images/room2.webp" alt="">
-                  </div>
-                  <div class="text">
-                    <h3>Delux Guest Rooms</h3>
-                    <p> <span>LKR</span>35,000 <span>/per night</span> </p>
-                  </div>
-                </div>
-                <div class="box">
-                  <div class="img">
-                    <img src="images/room3.webp" alt="">
-                  </div>
-                  <div class="text">
-                    <h3>Superior cottage Rooms</h3>
-                    <p> <span>LKR</span>40,000 <span>/per night</span> </p>
+                  <div class="box">
+                    <div class="img">
+                      <img src="images/room3.webp" alt="">
+                    </div>
+                    <div class="text">
+                      <h3>Superior cottage Rooms</h3>
+                      <p> <span>LKR</span>40,000 <span>/per night</span> </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
           </section>
 
           <div class="grid">
@@ -282,10 +282,53 @@
       <div x-show="tab === 2">
 
 
-
-
         <form x-on:submit.prevent="goToCheckout">
-          <div class="grid">
+          <div id="jutsu">
+            <div class="container2">
+              <div class="work-list">
+                <div class="work">
+                  <img src="images/adventures2.jpg">
+                  <div class="layer">
+                    <h3> Coral Propagation Project</h3>
+                    <P>Follow our experienced marine biologist and learn about the resort’s coral program in this fun
+                      and interactive coral-fragment plantation activity.</P>
+                  </div>
+                </div>
+                <div class="work">
+                  <img src="images/adventures3.webp">
+                  <div class="layer">
+                    <h3>Diving</h3>
+                    <P> Did you know North Male Atoll is home to over 40 world-class diving points, all within close
+                      proximity to Sheraton Maldives Full Moon Resort & Spa.
+
+                    </P>
+                  </div>
+                </div>
+                <div class="work">
+                  <img src="images/adventures4to.webp">
+                  <div class="layer">
+                    <h3>Sunset Dolphin Cruise</h3>
+                    <P>Cruise along the Indian Ocean on a traditional Maldivian Cruise Dhoni, soak in the breathtaking
+                      sunset and get your camera ready for a moment with these magnificent creatures.</P>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="">
+
+            <div class="col">
+              <label for="adventures" class="form-label">Adventures</label>
+              <div class=" mb-3">
+                <select type="date" class="form-control border-gray-400 border-2 rounded-lg text-lg p-2">
+                  <option selected>Select Adventure</option>
+                  <option>Diving</option>
+                  <option>Coral Propagation Project</option>
+                  <option>Sunset Dolphin Cruise</option>
+                </select>
+              </div>
+            </div>
+
             <div class="col ">
               <label for="number-of-adults-local" class="form-label">Number of Adults (Local)</label>
               <div class="form-floating mb-3">
